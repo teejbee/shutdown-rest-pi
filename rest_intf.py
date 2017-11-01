@@ -9,7 +9,7 @@ app = Flask(__name__)
 @app.route('/restpi/hello', methods=['GET'])
 def ping():
     print "pi is responding"
-    resp = Response(status = 200)
+    resp = Response("pi is good", status = 200)
     return resp
 
 @app.route('/restpi/shutdown', methods=['GET'])
